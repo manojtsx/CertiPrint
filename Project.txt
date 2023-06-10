@@ -1,0 +1,15 @@
+Project Name: Certificate Printing System
+Features: 
+ 1. 
+
+abcpanel.emis.com.np
+Functional Requirement:
+Admin
+1. Add Student Details
+2. Create Facilitator ID
+3. Add Facilitator Details
+4. Update Student Character Details
+4. Print Students Certificates-Character Certificate
+
+Facilitator-
+1. Fill students Character Details
