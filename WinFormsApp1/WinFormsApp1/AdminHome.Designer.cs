@@ -40,8 +40,8 @@
             label4 = new Label();
             label5 = new Label();
             panel1 = new Panel();
-            label6 = new Label();
             label7 = new Label();
+            label6 = new Label();
             panel2 = new Panel();
             label8 = new Label();
             label9 = new Label();
@@ -153,17 +153,6 @@
             panel1.Size = new Size(200, 100);
             panel1.TabIndex = 7;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(41, 10);
-            label6.Name = "label6";
-            label6.Size = new Size(113, 21);
-            label6.TabIndex = 0;
-            label6.Text = "No of Students";
-            label6.TextAlign = ContentAlignment.TopCenter;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -174,6 +163,17 @@
             label7.TabIndex = 1;
             label7.Text = "43";
             label7.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(41, 10);
+            label6.Name = "label6";
+            label6.Size = new Size(113, 21);
+            label6.TabIndex = 0;
+            label6.Text = "No of Students";
+            label6.TextAlign = ContentAlignment.TopCenter;
             // 
             // panel2
             // 
@@ -260,7 +260,7 @@
             panel5.Size = new Size(101, 100);
             panel5.TabIndex = 11;
             // 
-            // Form1
+            // AdminHome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -278,7 +278,7 @@
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "Form1";
+            Name = "AdminHome";
             Text = "Form1";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

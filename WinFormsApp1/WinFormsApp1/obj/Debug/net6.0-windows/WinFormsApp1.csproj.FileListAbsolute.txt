@@ -16,3 +16,10 @@ D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\refint\WinForms
 D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
 D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
+D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AdminAddFacilitator.resources
+D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AdminAddStudent.resources
+D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AdminEditFacilitator.resources
+D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AdminEditStudent.resources
+D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AdminFacilitator.resources
+D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AdminHome.resources
+D:\CertiPrint\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AdminStudent.resources
