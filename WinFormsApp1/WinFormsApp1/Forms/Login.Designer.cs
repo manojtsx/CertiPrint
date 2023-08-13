@@ -30,10 +30,10 @@
         {
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            loginbtn = new Button();
+            resetbtn = new Button();
+            userTextField = new TextBox();
+            passwordTextField = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -56,43 +56,43 @@
             label2.Text = "Password";
             label2.Click += label2_Click;
             // 
-            // button1
+            // loginbtn
             // 
-            button1.BackColor = Color.FromArgb(115, 187, 201);
-            button1.Location = new Point(329, 234);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 31);
-            button1.TabIndex = 2;
-            button1.Text = "Log In";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            loginbtn.BackColor = Color.FromArgb(115, 187, 201);
+            loginbtn.Location = new Point(329, 234);
+            loginbtn.Name = "loginbtn";
+            loginbtn.Size = new Size(94, 31);
+            loginbtn.TabIndex = 2;
+            loginbtn.Text = "Log In";
+            loginbtn.UseVisualStyleBackColor = false;
+            loginbtn.Click += button1_Click;
             // 
-            // button2
+            // resetbtn
             // 
-            button2.BackColor = Color.FromArgb(115, 187, 201);
-            button2.Location = new Point(446, 234);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 31);
-            button2.TabIndex = 3;
-            button2.Text = "Reset";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            resetbtn.BackColor = Color.FromArgb(115, 187, 201);
+            resetbtn.Location = new Point(446, 234);
+            resetbtn.Name = "resetbtn";
+            resetbtn.Size = new Size(94, 31);
+            resetbtn.TabIndex = 3;
+            resetbtn.Text = "Reset";
+            resetbtn.UseVisualStyleBackColor = false;
+            resetbtn.Click += button2_Click;
             // 
-            // textBox1
+            // userTextField
             // 
-            textBox1.BackColor = Color.FromArgb(241, 212, 229);
-            textBox1.Location = new Point(419, 130);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(175, 23);
-            textBox1.TabIndex = 6;
+            userTextField.BackColor = Color.FromArgb(241, 212, 229);
+            userTextField.Location = new Point(419, 130);
+            userTextField.Name = "userTextField";
+            userTextField.Size = new Size(175, 23);
+            userTextField.TabIndex = 6;
             // 
-            // textBox2
+            // passwordTextField
             // 
-            textBox2.BackColor = Color.FromArgb(241, 212, 229);
-            textBox2.Location = new Point(419, 165);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(175, 23);
-            textBox2.TabIndex = 7;
+            passwordTextField.BackColor = Color.FromArgb(241, 212, 229);
+            passwordTextField.Location = new Point(419, 165);
+            passwordTextField.Name = "passwordTextField";
+            passwordTextField.Size = new Size(175, 23);
+            passwordTextField.TabIndex = 7;
             // 
             // Login
             // 
@@ -100,10 +100,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(249, 245, 246);
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(passwordTextField);
+            Controls.Add(userTextField);
+            Controls.Add(resetbtn);
+            Controls.Add(loginbtn);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Login";
@@ -116,9 +116,9 @@
 
         private Label label1;
         private Label label2;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button loginbtn;
+        private Button resetbtn;
+        private TextBox userTextField;
+        private TextBox passwordTextField;
     }
 }
