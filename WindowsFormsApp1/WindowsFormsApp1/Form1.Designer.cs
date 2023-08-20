@@ -79,7 +79,7 @@
             // 
             this.panelContainer.Location = new System.Drawing.Point(0, 64);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(805, 391);
+            this.panelContainer.Size = new System.Drawing.Size(991, 391);
             this.panelContainer.TabIndex = 4;
             this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
