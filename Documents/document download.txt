@@ -1,0 +1,39 @@
+using System;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Windows.Forms;
+
+namespace UserControlPrintingExample
+{
+    public partial class Form1 : Form
+    {
+        private UserControl myUserControl;
+        private PrintDocument printDocument;
+
+        public Form1()
+        {
+            InitializeComponent();
+            myUserControl = new MyUserControl(); // Replace with your UserControl instance
+            printDocument = new PrintDocument();
+            printDocument.PrintPage += PrintDocument_PrintPage;
+        }
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            Bitmap bitmap = new Bitmap(myUserControl.Width, myUserControl.Height);
+            myUserControl.DrawToBitmap(bitmap, new Rectangle(0, 0, myUserControl.Width, myUserControl.Height));
+            graphics.DrawImage(bitmap, new Point(100, 100)); // Adjust the position as needed
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument;
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDocument.Print();
+            }
+        }
+    }
+}

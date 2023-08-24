@@ -18,14 +18,18 @@ namespace WindowsFormsApp1.UserControls
         {
             InitializeComponent();
         }
-        private void addUserControl(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            AdminForm.panel2.Controls.Clear();
-            AdminForm.panel2.Controls.Add(userControl);
-            userControl.BringToFront();
+        //private void addUserControl(UserControl userControl)
+        //{
+        //    userControl.Dock = DockStyle.Fill;
+        //    AdminForm.panel2.Controls.Clear();
+        //    AdminForm.panel2.Controls.Add(userControl);
+        //    userControl.BringToFront();
 
-        }
+        //}
+        // Inside StudentControl.cs
+
+
+
 
         private void studentUserControl_Load(object sender, EventArgs e)
         {
@@ -47,10 +51,14 @@ namespace WindowsFormsApp1.UserControls
 
         }
 
+        
         private void button4_Click(object sender, EventArgs e)
         {
-            AdminForm = new adminForm();
-            addUserControl(AddStudentUserControl);
+            // Instantiate the AddStudentControl user control
+             AddStudentUserControl = new addStudentUserControl();
+
+            // Call the method to switch the content in AdminForm.panel2
+            AdminForm.AddUserControl(AddStudentUserControl);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

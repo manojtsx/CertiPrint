@@ -59,5 +59,10 @@ namespace WindowsFormsApp1
             textBox2.Text = "";
             comboBox1.Text = "admin";
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

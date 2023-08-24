@@ -14,4 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WinFormsApp1
-build_property.ProjectDir = D:\CertiPrint\WinFormsApp1\WinFormsApp1\
+build_property.ProjectDir = D:\projects\CertiPrint-main\WinFormsApp1\WinFormsApp1\

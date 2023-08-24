@@ -83,7 +83,7 @@
             this.panelContainer.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panelContainer.Location = new System.Drawing.Point(0, 58);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(991, 391);
+            this.panelContainer.Size = new System.Drawing.Size(1352, 391);
             this.panelContainer.TabIndex = 4;
             this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(991, 57);
+            this.panel1.Size = new System.Drawing.Size(1352, 57);
             this.panel1.TabIndex = 5;
             // 
             // panel2
@@ -104,7 +104,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel2.Location = new System.Drawing.Point(0, 448);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(991, 408);
+            this.panel2.Size = new System.Drawing.Size(1352, 408);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -113,7 +113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1003, 704);
+            this.ClientSize = new System.Drawing.Size(1372, 793);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelContainer);

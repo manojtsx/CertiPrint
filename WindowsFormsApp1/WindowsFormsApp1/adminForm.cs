@@ -32,6 +32,16 @@ namespace WindowsFormsApp1
             userControl.BringToFront();
 
         }
+        // Inside AdminForm.cs
+
+        public void AddUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -45,8 +55,8 @@ namespace WindowsFormsApp1
         {
                this.Controls.Clear(); 
                Login login = new Login();
-                this.Hide();
-                login.Show();
+               this.Hide();
+               login.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

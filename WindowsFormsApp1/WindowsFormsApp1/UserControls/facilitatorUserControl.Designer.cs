@@ -147,8 +147,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            //this.Name = "facilitatorUserControl";
-            this.Size = new System.Drawing.Size(841, 372);
+            this.Name = "facilitatorUserControl";
+            this.Size = new System.Drawing.Size(1352, 391);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

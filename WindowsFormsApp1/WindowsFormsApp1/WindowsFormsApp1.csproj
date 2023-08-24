@@ -60,11 +60,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\addFacilitatorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\addFacilitatorUserControl.Designer.cs">
+      <DependentUpon>addFacilitatorUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\addStudentUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\addStudentUserControl.Designer.cs">
       <DependentUpon>addStudentUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\editFacilitatorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\editFacilitatorUserControl.Designer.cs">
+      <DependentUpon>editFacilitatorUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\editStudentUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\editStudentUserControl.Designer.cs">
+      <DependentUpon>editStudentUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\facilitatorUserControl.cs">
       <SubType>UserControl</SubType>
@@ -99,8 +117,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\addFacilitatorUserControl.resx">
+      <DependentUpon>addFacilitatorUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\addStudentUserControl.resx">
       <DependentUpon>addStudentUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\editFacilitatorUserControl.resx">
+      <DependentUpon>editFacilitatorUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\editStudentUserControl.resx">
+      <DependentUpon>editStudentUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\facilitatorUserControl.resx">
       <DependentUpon>facilitatorUserControl.cs</DependentUpon>

@@ -80,10 +80,18 @@ namespace WinFormsApp1
             }
         }
 
-            private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             userTextField.Text = "";
             passwordTextField.Text = "";
+
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+
 
 
         }

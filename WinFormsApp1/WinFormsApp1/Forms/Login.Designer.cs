@@ -39,9 +39,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(329, 131);
+            label1.Location = new Point(376, 175);
             label1.Name = "label1";
-            label1.Size = new Size(60, 15);
+            label1.Size = new Size(75, 20);
             label1.TabIndex = 0;
             label1.Text = "Username";
             label1.Click += label1_Click;
@@ -49,9 +49,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(329, 173);
+            label2.Location = new Point(376, 231);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(70, 20);
             label2.TabIndex = 1;
             label2.Text = "Password";
             label2.Click += label2_Click;
@@ -59,9 +59,10 @@
             // loginbtn
             // 
             loginbtn.BackColor = Color.FromArgb(115, 187, 201);
-            loginbtn.Location = new Point(329, 234);
+            loginbtn.Location = new Point(376, 312);
+            loginbtn.Margin = new Padding(3, 4, 3, 4);
             loginbtn.Name = "loginbtn";
-            loginbtn.Size = new Size(94, 31);
+            loginbtn.Size = new Size(107, 41);
             loginbtn.TabIndex = 2;
             loginbtn.Text = "Log In";
             loginbtn.UseVisualStyleBackColor = false;
@@ -70,9 +71,10 @@
             // resetbtn
             // 
             resetbtn.BackColor = Color.FromArgb(115, 187, 201);
-            resetbtn.Location = new Point(446, 234);
+            resetbtn.Location = new Point(510, 312);
+            resetbtn.Margin = new Padding(3, 4, 3, 4);
             resetbtn.Name = "resetbtn";
-            resetbtn.Size = new Size(94, 31);
+            resetbtn.Size = new Size(107, 41);
             resetbtn.TabIndex = 3;
             resetbtn.Text = "Reset";
             resetbtn.UseVisualStyleBackColor = false;
@@ -81,33 +83,39 @@
             // userTextField
             // 
             userTextField.BackColor = Color.FromArgb(241, 212, 229);
-            userTextField.Location = new Point(419, 130);
+            userTextField.Location = new Point(479, 173);
+            userTextField.Margin = new Padding(3, 4, 3, 4);
             userTextField.Name = "userTextField";
-            userTextField.Size = new Size(175, 23);
+            userTextField.Size = new Size(199, 27);
             userTextField.TabIndex = 6;
             // 
             // passwordTextField
             // 
             passwordTextField.BackColor = Color.FromArgb(241, 212, 229);
-            passwordTextField.Location = new Point(419, 165);
+            passwordTextField.Location = new Point(479, 220);
+            passwordTextField.Margin = new Padding(3, 4, 3, 4);
             passwordTextField.Name = "passwordTextField";
-            passwordTextField.Size = new Size(175, 23);
+            passwordTextField.Size = new Size(199, 27);
             passwordTextField.TabIndex = 7;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = Color.FromArgb(249, 245, 246);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            ControlBox = false;
             Controls.Add(passwordTextField);
             Controls.Add(userTextField);
             Controls.Add(resetbtn);
             Controls.Add(loginbtn);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }

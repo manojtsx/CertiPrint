@@ -1,0 +1,12 @@
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\bin\Debug\CertiPrint.exe.config
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\bin\Debug\CertiPrint.exe
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\bin\Debug\CertiPrint.pdb
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\obj\Debug\CertiPrint.csproj.AssemblyReference.cache
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\obj\Debug\CertiPrint.Form1.resources
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\obj\Debug\CertiPrint.Properties.Resources.resources
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\obj\Debug\CertiPrint.UserControl1.resources
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\obj\Debug\CertiPrint.UserControl2.resources
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\obj\Debug\CertiPrint.csproj.GenerateResource.cache
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\obj\Debug\CertiPrint.csproj.CoreCompileInputs.cache
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\obj\Debug\CertiPrint.exe
+D:\projects\CertiPrint-main\CertiPrint\CertiPrint\obj\Debug\CertiPrint.pdb
