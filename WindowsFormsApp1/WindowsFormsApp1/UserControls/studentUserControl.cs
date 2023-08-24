@@ -12,9 +12,19 @@ namespace WindowsFormsApp1.UserControls
 {
     public partial class studentUserControl : UserControl
     {
+        private adminForm AdminForm;
+        private addStudentUserControl AddStudentUserControl;
         public studentUserControl()
         {
             InitializeComponent();
+        }
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            AdminForm.panel2.Controls.Clear();
+            AdminForm.panel2.Controls.Add(userControl);
+            userControl.BringToFront();
+
         }
 
         private void studentUserControl_Load(object sender, EventArgs e)
@@ -39,7 +49,14 @@ namespace WindowsFormsApp1.UserControls
 
         private void button4_Click(object sender, EventArgs e)
         {
+            AdminForm = new adminForm();
+            addUserControl(AddStudentUserControl);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
+
     }
 }
