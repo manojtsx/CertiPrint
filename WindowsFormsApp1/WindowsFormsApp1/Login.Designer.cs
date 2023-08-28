@@ -37,6 +37,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.mainPanelContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,12 +136,21 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "User Role";
             // 
+            // mainPanelContainer
+            // 
+            this.mainPanelContainer.Location = new System.Drawing.Point(0, 3);
+            this.mainPanelContainer.Name = "mainPanelContainer";
+            this.mainPanelContainer.Size = new System.Drawing.Size(1382, 724);
+            this.mainPanelContainer.TabIndex = 3;
+            this.mainPanelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanelContainer_Paint);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1380, 730);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.mainPanelContainer);
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
@@ -161,5 +171,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel mainPanelContainer;
     }
 }

@@ -36,10 +36,11 @@
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.printButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.studentExtraPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,58 +115,66 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Student Page";
             // 
-            // button1
+            // editButton
             // 
-            this.button1.Location = new System.Drawing.Point(19, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 43);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Edit ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.editButton.Location = new System.Drawing.Point(19, 309);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(92, 43);
+            this.editButton.TabIndex = 2;
+            this.editButton.Text = "Edit ";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // deleteButton
             // 
-            this.button2.Location = new System.Drawing.Point(139, 309);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 43);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.deleteButton.Location = new System.Drawing.Point(139, 309);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(92, 43);
+            this.deleteButton.TabIndex = 3;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // printButton
             // 
-            this.button3.Location = new System.Drawing.Point(251, 309);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 43);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Print";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.printButton.Location = new System.Drawing.Point(251, 309);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(92, 43);
+            this.printButton.TabIndex = 4;
+            this.printButton.Text = "Print";
+            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // addButton
             // 
-            this.button4.Location = new System.Drawing.Point(370, 309);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 43);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.addButton.Location = new System.Drawing.Point(370, 309);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(92, 43);
+            this.addButton.TabIndex = 5;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // studentExtraPanel
+            // 
+            this.studentExtraPanel.Location = new System.Drawing.Point(844, 4);
+            this.studentExtraPanel.Name = "studentExtraPanel";
+            this.studentExtraPanel.Size = new System.Drawing.Size(537, 384);
+            this.studentExtraPanel.TabIndex = 6;
             // 
             // studentUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.studentExtraPanel);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.printButton);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             //this.Name = "studentUserControl";
-            this.Size = new System.Drawing.Size(841, 372);
+            this.Size = new System.Drawing.Size(1384, 391);
             this.Load += new System.EventHandler(this.studentUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -183,9 +192,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn SID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button printButton;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Panel studentExtraPanel;
     }
 }

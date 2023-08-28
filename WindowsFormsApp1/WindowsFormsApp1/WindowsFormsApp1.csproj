@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,17 +53,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adminForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="adminForm.Designer.cs">
-      <DependentUpon>adminForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="dbConnect.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\admin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\certificate.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\certiprint.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>certiprint.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\certiprint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>certiprint.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facilitator.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\login.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\student.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +104,18 @@
     <Compile Include="UserControls\addStudentUserControl.Designer.cs">
       <DependentUpon>addStudentUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\adminHomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\adminHomePage.Designer.cs">
+      <DependentUpon>adminHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\adminUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\adminUserControl.Designer.cs">
+      <DependentUpon>adminUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\editFacilitatorUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,17 +128,23 @@
     <Compile Include="UserControls\editStudentUserControl.Designer.cs">
       <DependentUpon>editStudentUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\facilitatorHomepageUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\facilitatorHomepageUserControl.Designer.cs">
+      <DependentUpon>facilitatorHomepageUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\facilitatorUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\facilitatorUserControl.Designer.cs">
       <DependentUpon>facilitatorUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\homepageUserControl.cs">
+    <Compile Include="UserControls\facilitatorUserControlFacilitator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\homepageUserControl.Designer.cs">
-      <DependentUpon>homepageUserControl.cs</DependentUpon>
+    <Compile Include="UserControls\facilitatorUserControlFacilitator.Designer.cs">
+      <DependentUpon>facilitatorUserControlFacilitator.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\studentUserControl.cs">
       <SubType>UserControl</SubType>
@@ -102,9 +152,12 @@
     <Compile Include="UserControls\studentUserControl.Designer.cs">
       <DependentUpon>studentUserControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="adminForm.resx">
-      <DependentUpon>adminForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="UserControls\studentUserControlFacilitator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\studentUserControlFacilitator.Designer.cs">
+      <DependentUpon>studentUserControlFacilitator.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,21 +176,41 @@
     <EmbeddedResource Include="UserControls\addStudentUserControl.resx">
       <DependentUpon>addStudentUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\adminHomePage.resx">
+      <DependentUpon>adminHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\adminUserControl.resx">
+      <DependentUpon>adminUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\editFacilitatorUserControl.resx">
       <DependentUpon>editFacilitatorUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\editStudentUserControl.resx">
       <DependentUpon>editStudentUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\facilitatorHomepageUserControl.resx">
+      <DependentUpon>facilitatorHomepageUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\facilitatorUserControl.resx">
       <DependentUpon>facilitatorUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\homepageUserControl.resx">
-      <DependentUpon>homepageUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\facilitatorUserControlFacilitator.resx">
+      <DependentUpon>facilitatorUserControlFacilitator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\studentUserControl.resx">
       <DependentUpon>studentUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\studentUserControlFacilitator.resx">
+      <DependentUpon>studentUserControlFacilitator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Models\certiprint.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>certiprint.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\certiprint.edmx.diagram">
+      <DependentUpon>certiprint.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,6 +223,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\certiprint.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>certiprint.Context.cs</LastGenOutput>
+      <DependentUpon>certiprint.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\certiprint.edmx.sql" />
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>certiprint.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="certiprint.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="certiprintStoreContainer">
+    <EntitySet Name="logins" EntityType="certiprint.Store.logins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="admins" EntityType="certiprint.Store.admins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="facilitators" EntityType="certiprint.Store.facilitators" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="certificates" EntityType="certiprint.Store.certificates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="students" EntityType="certiprint.Store.students" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="adminlogin" Association="certiprint.Store.adminlogin">
+      <End Role="admin" EntitySet="admins" />
+      <End Role="login" EntitySet="logins" />
+    </AssociationSet>
+    <AssociationSet Name="facilitatorlogin" Association="certiprint.Store.facilitatorlogin">
+      <End Role="facilitator" EntitySet="facilitators" />
+      <End Role="login" EntitySet="logins" />
+    </AssociationSet>
+    <AssociationSet Name="logincertificate" Association="certiprint.Store.logincertificate">
+      <End Role="login" EntitySet="logins" />
+      <End Role="certificate" EntitySet="certificates" />
+    </AssociationSet>
+    <AssociationSet Name="studentlogin" Association="certiprint.Store.studentlogin">
+      <End Role="student" EntitySet="students" />
+      <End Role="login" EntitySet="logins" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="logins">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="usertype" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="admins">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="login_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="facilitators">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="subjectName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="login_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="certificates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="schoolName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="schoolAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="loginId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="students">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="gpa" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="grade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="remarks" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="login_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="adminlogin">
+    <End Role="admin" Type="certiprint.Store.admins" Multiplicity="*" />
+    <End Role="login" Type="certiprint.Store.logins" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="login">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="admin">
+        <PropertyRef Name="login_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="facilitatorlogin">
+    <End Role="facilitator" Type="certiprint.Store.facilitators" Multiplicity="*" />
+    <End Role="login" Type="certiprint.Store.logins" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="login">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="facilitator">
+        <PropertyRef Name="login_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="logincertificate">
+    <End Role="login" Type="certiprint.Store.logins" Multiplicity="1" />
+    <End Role="certificate" Type="certiprint.Store.certificates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="login">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="certificate">
+        <PropertyRef Name="loginId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="studentlogin">
+    <End Role="student" Type="certiprint.Store.students" Multiplicity="*" />
+    <End Role="login" Type="certiprint.Store.logins" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="login">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="login_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

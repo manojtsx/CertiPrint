@@ -7,26 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+
 
 namespace WindowsFormsApp1.UserControls
 {
     public partial class studentUserControl : UserControl
     {
-        private adminForm AdminForm;
         private addStudentUserControl AddStudentUserControl;
+        private editStudentUserControl EditStudentUserControl;
+        private adminUserControl AdminUserControl;
+        private PrintDocument printDocument;
         public studentUserControl()
         {
             InitializeComponent();
+            AddStudentUserControl = new addStudentUserControl();    
+            printDocument = new PrintDocument();
+            printDocument.PrintPage += PrintDocument_PrintPage;
         }
-        //private void addUserControl(UserControl userControl)
-        //{
-        //    userControl.Dock = DockStyle.Fill;
-        //    AdminForm.panel2.Controls.Clear();
-        //    AdminForm.panel2.Controls.Add(userControl);
-        //    userControl.BringToFront();
+        //prints the usercontrol
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            Bitmap bitmap = new Bitmap(AddStudentUserControl.Width, AddStudentUserControl.Height);
+            AddStudentUserControl.DrawToBitmap(bitmap, new Rectangle(0, 0, AddStudentUserControl.Width, AddStudentUserControl.Height));
+            graphics.DrawImage(bitmap, new Point(100, 100)); // Adjust the position as needed
+        }
 
-        //}
-        // Inside StudentControl.cs
+        public void addUserControlSecondPanel(UserControl userControl)
+        {
+            studentExtraPanel.Controls.Clear();
+            studentExtraPanel.Controls.Add(userControl);
+            studentExtraPanel.BringToFront();
+        }
 
 
 
@@ -38,6 +51,8 @@ namespace WindowsFormsApp1.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
+            EditStudentUserControl = new editStudentUserControl();
+            addUserControlSecondPanel(EditStudentUserControl);
 
         }
 
@@ -48,17 +63,20 @@ namespace WindowsFormsApp1.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument;
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDocument.Print();
+            }
         }
 
         
         private void button4_Click(object sender, EventArgs e)
         {
-            // Instantiate the AddStudentControl user control
-             AddStudentUserControl = new addStudentUserControl();
+            AddStudentUserControl = new addStudentUserControl();
+            addUserControlSecondPanel(AddStudentUserControl);
 
-            // Call the method to switch the content in AdminForm.panel2
-            AdminForm.AddUserControl(AddStudentUserControl);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
