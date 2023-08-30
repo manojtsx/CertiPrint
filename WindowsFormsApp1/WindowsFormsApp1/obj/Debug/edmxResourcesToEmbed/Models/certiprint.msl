@@ -54,29 +54,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="adminlogin" TypeName="certiprint.adminlogin" StoreEntitySet="admins">
-      <EndProperty Name="login">
-        <ScalarProperty Name="Id" ColumnName="login_Id" />
-      </EndProperty>
-      <EndProperty Name="admin">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="facilitatorlogin" TypeName="certiprint.facilitatorlogin" StoreEntitySet="facilitators">
-      <EndProperty Name="login">
-        <ScalarProperty Name="Id" ColumnName="login_Id" />
-      </EndProperty>
-      <EndProperty Name="facilitator">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="studentlogin" TypeName="certiprint.studentlogin" StoreEntitySet="students">
-      <EndProperty Name="login">
-        <ScalarProperty Name="Id" ColumnName="login_Id" />
-      </EndProperty>
-      <EndProperty Name="student">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

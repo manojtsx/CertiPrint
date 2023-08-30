@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(facilitatorHomepageUserControl));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.homeMenu = new System.Windows.Forms.Label();
-            this.studentMenu = new System.Windows.Forms.Label();
-            this.facilitatorMenu = new System.Windows.Forms.Label();
-            this.logoutMenu = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logoutMenu = new System.Windows.Forms.Label();
+            this.facilitatorMenu = new System.Windows.Forms.Label();
+            this.studentMenu = new System.Windows.Forms.Label();
+            this.homeMenu = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Salmon;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.logoutMenu);
             this.panel1.Controls.Add(this.facilitatorMenu);
@@ -51,35 +52,15 @@
             this.panel1.Size = new System.Drawing.Size(1384, 85);
             this.panel1.TabIndex = 0;
             // 
-            // homeMenu
+            // pictureBox1
             // 
-            this.homeMenu.AutoSize = true;
-            this.homeMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeMenu.Location = new System.Drawing.Point(719, 37);
-            this.homeMenu.Name = "homeMenu";
-            this.homeMenu.Size = new System.Drawing.Size(57, 22);
-            this.homeMenu.TabIndex = 0;
-            this.homeMenu.Text = "Home";
-            // 
-            // studentMenu
-            // 
-            this.studentMenu.AutoSize = true;
-            this.studentMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentMenu.Location = new System.Drawing.Point(818, 37);
-            this.studentMenu.Name = "studentMenu";
-            this.studentMenu.Size = new System.Drawing.Size(68, 22);
-            this.studentMenu.TabIndex = 1;
-            this.studentMenu.Text = "Student";
-            // 
-            // facilitatorMenu
-            // 
-            this.facilitatorMenu.AutoSize = true;
-            this.facilitatorMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facilitatorMenu.Location = new System.Drawing.Point(947, 37);
-            this.facilitatorMenu.Name = "facilitatorMenu";
-            this.facilitatorMenu.Size = new System.Drawing.Size(93, 22);
-            this.facilitatorMenu.TabIndex = 1;
-            this.facilitatorMenu.Text = "Facilitator";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // logoutMenu
             // 
@@ -91,15 +72,35 @@
             this.logoutMenu.TabIndex = 1;
             this.logoutMenu.Text = "Log Out";
             // 
-            // pictureBox1
+            // facilitatorMenu
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.facilitatorMenu.AutoSize = true;
+            this.facilitatorMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facilitatorMenu.Location = new System.Drawing.Point(947, 37);
+            this.facilitatorMenu.Name = "facilitatorMenu";
+            this.facilitatorMenu.Size = new System.Drawing.Size(93, 22);
+            this.facilitatorMenu.TabIndex = 1;
+            this.facilitatorMenu.Text = "Facilitator";
+            // 
+            // studentMenu
+            // 
+            this.studentMenu.AutoSize = true;
+            this.studentMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentMenu.Location = new System.Drawing.Point(818, 37);
+            this.studentMenu.Name = "studentMenu";
+            this.studentMenu.Size = new System.Drawing.Size(68, 22);
+            this.studentMenu.TabIndex = 1;
+            this.studentMenu.Text = "Student";
+            // 
+            // homeMenu
+            // 
+            this.homeMenu.AutoSize = true;
+            this.homeMenu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeMenu.Location = new System.Drawing.Point(719, 37);
+            this.homeMenu.Name = "homeMenu";
+            this.homeMenu.Size = new System.Drawing.Size(57, 22);
+            this.homeMenu.TabIndex = 0;
+            this.homeMenu.Text = "Home";
             // 
             // facilitatorHomepageUserControl
             // 

@@ -6,22 +6,6 @@
     <EntitySet Name="facilitators" EntityType="certiprint.facilitator" />
     <EntitySet Name="certificates" EntityType="certiprint.certificate" />
     <EntitySet Name="students" EntityType="certiprint.student" />
-    <AssociationSet Name="adminlogin" Association="certiprint.adminlogin">
-      <End Role="admin" EntitySet="admins" />
-      <End Role="login" EntitySet="logins" />
-    </AssociationSet>
-    <AssociationSet Name="facilitatorlogin" Association="certiprint.facilitatorlogin">
-      <End Role="facilitator" EntitySet="facilitators" />
-      <End Role="login" EntitySet="logins" />
-    </AssociationSet>
-    <AssociationSet Name="logincertificate" Association="certiprint.logincertificate">
-      <End Role="login" EntitySet="logins" />
-      <End Role="certificate" EntitySet="certificates" />
-    </AssociationSet>
-    <AssociationSet Name="studentlogin" Association="certiprint.studentlogin">
-      <End Role="student" EntitySet="students" />
-      <End Role="login" EntitySet="logins" />
-    </AssociationSet>
   </EntityContainer>
   <EntityType Name="login">
     <Key>
@@ -31,10 +15,6 @@
     <Property Name="username" Type="String" Nullable="false" />
     <Property Name="password" Type="String" Nullable="false" />
     <Property Name="usertype" Type="String" Nullable="false" />
-    <NavigationProperty Name="admins" Relationship="certiprint.adminlogin" FromRole="login" ToRole="admin" />
-    <NavigationProperty Name="facilitators" Relationship="certiprint.facilitatorlogin" FromRole="login" ToRole="facilitator" />
-    <NavigationProperty Name="certificates" Relationship="certiprint.logincertificate" FromRole="login" ToRole="certificate" />
-    <NavigationProperty Name="students" Relationship="certiprint.studentlogin" FromRole="login" ToRole="student" />
   </EntityType>
   <EntityType Name="admin">
     <Key>
@@ -43,7 +23,6 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="username" Type="String" Nullable="false" />
     <Property Name="password" Type="String" Nullable="false" />
-    <NavigationProperty Name="login" Relationship="certiprint.adminlogin" FromRole="admin" ToRole="login" />
   </EntityType>
   <EntityType Name="facilitator">
     <Key>
@@ -54,7 +33,6 @@
     <Property Name="password" Type="String" Nullable="false" />
     <Property Name="address" Type="String" Nullable="false" />
     <Property Name="subjectName" Type="String" Nullable="false" />
-    <NavigationProperty Name="login" Relationship="certiprint.facilitatorlogin" FromRole="facilitator" ToRole="login" />
   </EntityType>
   <EntityType Name="certificate">
     <Key>
@@ -63,7 +41,6 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="schoolName" Type="String" Nullable="false" />
     <Property Name="schoolAddress" Type="String" Nullable="false" />
-    <NavigationProperty Name="login" Relationship="certiprint.logincertificate" FromRole="certificate" ToRole="login" />
     <Property Name="loginId" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="student">
@@ -77,30 +54,5 @@
     <Property Name="gpa" Type="String" Nullable="false" />
     <Property Name="grade" Type="String" Nullable="false" />
     <Property Name="remarks" Type="String" Nullable="false" />
-    <NavigationProperty Name="login" Relationship="certiprint.studentlogin" FromRole="student" ToRole="login" />
   </EntityType>
-  <Association Name="adminlogin">
-    <End Type="certiprint.admin" Role="admin" Multiplicity="*" />
-    <End Type="certiprint.login" Role="login" Multiplicity="1" />
-  </Association>
-  <Association Name="facilitatorlogin">
-    <End Type="certiprint.facilitator" Role="facilitator" Multiplicity="*" />
-    <End Type="certiprint.login" Role="login" Multiplicity="1" />
-  </Association>
-  <Association Name="logincertificate">
-    <End Type="certiprint.login" Role="login" Multiplicity="1" />
-    <End Type="certiprint.certificate" Role="certificate" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="login">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="certificate">
-        <PropertyRef Name="loginId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="studentlogin">
-    <End Type="certiprint.student" Role="student" Multiplicity="*" />
-    <End Type="certiprint.login" Role="login" Multiplicity="1" />
-  </Association>
 </Schema>

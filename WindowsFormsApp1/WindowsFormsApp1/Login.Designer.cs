@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -138,6 +139,7 @@
             // 
             // mainPanelContainer
             // 
+            this.mainPanelContainer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanelContainer.BackgroundImage")));
             this.mainPanelContainer.Location = new System.Drawing.Point(0, 3);
             this.mainPanelContainer.Name = "mainPanelContainer";
             this.mainPanelContainer.Size = new System.Drawing.Size(1382, 724);

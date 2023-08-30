@@ -117,42 +117,54 @@
             // 
             // editButton
             // 
+            this.editButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.editButton.Location = new System.Drawing.Point(19, 309);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(92, 43);
             this.editButton.TabIndex = 2;
             this.editButton.Text = "Edit ";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.deleteButton.Location = new System.Drawing.Point(139, 309);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(92, 43);
             this.deleteButton.TabIndex = 3;
             this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // printButton
             // 
+            this.printButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.printButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.printButton.Location = new System.Drawing.Point(251, 309);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(92, 43);
             this.printButton.TabIndex = 4;
             this.printButton.Text = "Print";
-            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.UseVisualStyleBackColor = false;
             this.printButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // addButton
             // 
+            this.addButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addButton.Location = new System.Drawing.Point(370, 309);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(92, 43);
             this.addButton.TabIndex = 5;
             this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.button4_Click);
             // 
             // studentExtraPanel

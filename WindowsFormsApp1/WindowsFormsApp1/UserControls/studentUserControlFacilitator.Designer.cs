@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.SName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.addRemarksButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,16 +58,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(804, 169);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(540, 7);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(8, 8);
-            this.dataGridView2.TabIndex = 1;
             // 
             // SName
             // 
@@ -111,6 +101,16 @@
             this.SID.Name = "SID";
             this.SID.Width = 125;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(540, 7);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(8, 8);
+            this.dataGridView2.TabIndex = 1;
+            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(844, 4);
@@ -120,12 +120,15 @@
             // 
             // addRemarksButton
             // 
+            this.addRemarksButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.addRemarksButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addRemarksButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addRemarksButton.Location = new System.Drawing.Point(33, 218);
             this.addRemarksButton.Name = "addRemarksButton";
             this.addRemarksButton.Size = new System.Drawing.Size(127, 44);
             this.addRemarksButton.TabIndex = 3;
             this.addRemarksButton.Text = "Add Remarks";
-            this.addRemarksButton.UseVisualStyleBackColor = true;
+            this.addRemarksButton.UseVisualStyleBackColor = false;
             // 
             // studentUserControlFacilitator
             // 

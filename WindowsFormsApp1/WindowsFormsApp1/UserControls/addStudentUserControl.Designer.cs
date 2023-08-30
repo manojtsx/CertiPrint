@@ -34,16 +34,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.usernameField = new System.Windows.Forms.TextBox();
+            this.passwordField = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.remarksField = new System.Windows.Forms.ComboBox();
             this.addressField = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.gpaField = new System.Windows.Forms.TextBox();
             this.gradeField = new System.Windows.Forms.TextBox();
             this.nameField = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.passwordField = new System.Windows.Forms.TextBox();
-            this.usernameField = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,16 +85,20 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(161, 290);
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(142, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 45);
             this.button1.TabIndex = 4;
             this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Salmon;
             this.panel1.Controls.Add(this.usernameField);
             this.panel1.Controls.Add(this.passwordField);
             this.panel1.Controls.Add(this.label7);
@@ -115,6 +119,39 @@
             this.panel1.Size = new System.Drawing.Size(395, 348);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // usernameField
+            // 
+            this.usernameField.Location = new System.Drawing.Point(142, 17);
+            this.usernameField.Name = "usernameField";
+            this.usernameField.Size = new System.Drawing.Size(207, 22);
+            this.usernameField.TabIndex = 15;
+            // 
+            // passwordField
+            // 
+            this.passwordField.Location = new System.Drawing.Point(142, 54);
+            this.passwordField.Name = "passwordField";
+            this.passwordField.Size = new System.Drawing.Size(207, 22);
+            this.passwordField.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(58, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Password";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(55, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Username";
             // 
             // remarksField
             // 
@@ -167,39 +204,6 @@
             this.nameField.Name = "nameField";
             this.nameField.Size = new System.Drawing.Size(207, 22);
             this.nameField.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Username";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(58, 57);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 16);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Password";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // passwordField
-            // 
-            this.passwordField.Location = new System.Drawing.Point(142, 54);
-            this.passwordField.Name = "passwordField";
-            this.passwordField.Size = new System.Drawing.Size(207, 22);
-            this.passwordField.TabIndex = 14;
-            // 
-            // usernameField
-            // 
-            this.usernameField.Location = new System.Drawing.Point(142, 17);
-            this.usernameField.Name = "usernameField";
-            this.usernameField.Size = new System.Drawing.Size(207, 22);
-            this.usernameField.TabIndex = 15;
             // 
             // addStudentUserControl
             // 
