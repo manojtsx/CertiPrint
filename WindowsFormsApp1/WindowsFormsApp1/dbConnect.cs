@@ -16,7 +16,7 @@ namespace SAM.form
         private static SqlDataAdapter adapter = new SqlDataAdapter();
         public SqlTransaction DbTran;
 
-        private static string strConnString = "Data Source=DESKTOP-0GGM995\\MSSQLSERVER01;Initial Catalog=certiprint;Integrated Security=True";
+        public static string strConnString = "Data Source=DESKTOP-0GGM995\\MSSQLSERVER01;Initial Catalog=certiprint;Integrated Security=True";
 
         public bool createConn()
         {

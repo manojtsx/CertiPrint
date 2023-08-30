@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.editButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -47,13 +41,6 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
-            this.Address,
-            this.GPA,
-            this.Grade,
-            this.Remarks,
-            this.SID});
             this.dataGridView1.Location = new System.Drawing.Point(17, 66);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -61,49 +48,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(803, 224);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            this.Name.Width = 125;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Address";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            this.Address.Width = 125;
-            // 
-            // GPA
-            // 
-            this.GPA.HeaderText = "GPA";
-            this.GPA.MinimumWidth = 6;
-            this.GPA.Name = "GPA";
-            this.GPA.Width = 125;
-            // 
-            // Grade
-            // 
-            this.Grade.HeaderText = "Grade";
-            this.Grade.MinimumWidth = 6;
-            this.Grade.Name = "Grade";
-            this.Grade.Width = 125;
-            // 
-            // Remarks
-            // 
-            this.Remarks.HeaderText = "Remarks";
-            this.Remarks.MinimumWidth = 6;
-            this.Remarks.Name = "Remarks";
-            this.Remarks.Width = 125;
-            // 
-            // SID
-            // 
-            this.SID.HeaderText = "SID";
-            this.SID.MinimumWidth = 6;
-            this.SID.Name = "SID";
-            this.SID.ReadOnly = true;
-            this.SID.Width = 125;
             // 
             // label1
             // 
@@ -185,7 +129,7 @@
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            //this.Name = "studentUserControl";
+            this.Name = "studentUserControl";
             this.Size = new System.Drawing.Size(1384, 391);
             this.Load += new System.EventHandler(this.studentUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -197,12 +141,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GPA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button deleteButton;

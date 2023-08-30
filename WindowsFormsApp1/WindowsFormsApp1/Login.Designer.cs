@@ -33,10 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.userroleField = new System.Windows.Forms.ComboBox();
+            this.passwordField = new System.Windows.Forms.TextBox();
+            this.usernameField = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.mainPanelContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -64,10 +64,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.loginButton);
+            this.panel1.Controls.Add(this.userroleField);
+            this.panel1.Controls.Add(this.passwordField);
+            this.panel1.Controls.Add(this.usernameField);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
@@ -87,46 +87,46 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // loginButton
             // 
-            this.button1.Location = new System.Drawing.Point(74, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Log In";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.loginButton.Location = new System.Drawing.Point(74, 191);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(96, 32);
+            this.loginButton.TabIndex = 6;
+            this.loginButton.Text = "Log In";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // userroleField
             // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.userroleField.AutoCompleteCustomSource.AddRange(new string[] {
             "admin",
             "facilitator"});
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.userroleField.FormattingEnabled = true;
+            this.userroleField.Items.AddRange(new object[] {
             "facilitator",
             "admin"});
-            this.comboBox1.Location = new System.Drawing.Point(121, 129);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.userroleField.Location = new System.Drawing.Point(121, 129);
+            this.userroleField.Name = "userroleField";
+            this.userroleField.Size = new System.Drawing.Size(121, 24);
+            this.userroleField.TabIndex = 5;
+            this.userroleField.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox2
+            // passwordField
             // 
-            this.textBox2.Location = new System.Drawing.Point(121, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 22);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.passwordField.Location = new System.Drawing.Point(121, 78);
+            this.passwordField.Name = "passwordField";
+            this.passwordField.Size = new System.Drawing.Size(208, 22);
+            this.passwordField.TabIndex = 4;
+            this.passwordField.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // usernameField
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.usernameField.Location = new System.Drawing.Point(121, 17);
+            this.usernameField.Name = "usernameField";
+            this.usernameField.Size = new System.Drawing.Size(208, 22);
+            this.usernameField.TabIndex = 3;
+            this.usernameField.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -167,12 +167,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox userroleField;
+        private System.Windows.Forms.TextBox passwordField;
+        private System.Windows.Forms.TextBox usernameField;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Panel mainPanelContainer;
     }
 }

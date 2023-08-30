@@ -1,7 +1,9 @@
-﻿using System;
+﻿using SAM.form;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +19,26 @@ namespace WindowsFormsApp1.UserControls
         public facilitatorUserControl()
         {
             InitializeComponent();
+            using (SqlConnection connection = new SqlConnection(dbConnect.strConnString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM facilitators";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            DataTable dataTable = new DataTable();
+                            dataTable.Load(reader);
+
+                            // Bind the data to the DataGridView
+                            dataGridView1.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
         }
         public void addUserControlSecondPanel(UserControl userControl)
         {
@@ -45,6 +67,62 @@ namespace WindowsFormsApp1.UserControls
         {
             AddFacilitatorUserControl = new addFacilitatorUserControl();
             addUserControlSecondPanel(AddFacilitatorUserControl);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void RefreshDataGridView()
+        {
+            using (SqlConnection connection = new SqlConnection(dbConnect.strConnString))
+            {
+                connection.Open();
+
+                string selectQuery = "SELECT * FROM students";
+                using (SqlCommand command = new SqlCommand(selectQuery, connection))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dataGridView1.DataSource = dataTable;
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Check if any row is selected
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedRowIndex = dataGridView1.SelectedRows[0].Index;
+
+                // Get the value of the primary key from the selected row (assuming the ID is stored in the first column)
+                int idToDelete = Convert.ToInt32(dataGridView1.Rows[selectedRowIndex].Cells[0].Value);
+
+                using (SqlConnection connection = new SqlConnection(dbConnect.strConnString))
+                {
+                    connection.Open();
+
+                    string deleteQuery = "DELETE FROM facilitators WHERE ID = @ID";
+                    using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", idToDelete);
+                        command.ExecuteNonQuery();
+                    }
+
+                    // Refresh the DataGridView after deletion
+                    RefreshDataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select a row to delete.");
+            }
+
         }
     }
 }
