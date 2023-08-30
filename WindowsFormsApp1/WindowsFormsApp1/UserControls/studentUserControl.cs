@@ -81,6 +81,32 @@ namespace WindowsFormsApp1.UserControls
         private void button1_Click(object sender, EventArgs e)
         {
             EditStudentUserControl = new editStudentUserControl();
+            string id = "";
+            string username = "";
+            string gpa = "";
+            string grade = "";
+            string address = "";
+            string remarks = "";
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                id = selectedRow.Cells["id"].Value.ToString();
+                username = selectedRow.Cells["username"].Value.ToString();
+                gpa = selectedRow.Cells["gpa"].Value.ToString();
+                grade = selectedRow.Cells["grade"].Value.ToString();
+                address = selectedRow.Cells["gpa"].Value.ToString();
+               remarks = selectedRow.Cells["remarks"].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No rows selected..");
+            }
+            EditStudentUserControl.label7.Text = id;
+            EditStudentUserControl.nameField.Text = username;
+            EditStudentUserControl.gradeField.Text = grade;
+            EditStudentUserControl.gpaField.Text = gpa;
+            EditStudentUserControl.addressField.Text = address;
+            EditStudentUserControl.remarksField.Text = remarks;
             addUserControlSecondPanel(EditStudentUserControl);
 
         }
@@ -121,9 +147,17 @@ namespace WindowsFormsApp1.UserControls
         {
             PrintDialog printDialog = new PrintDialog();
             printDialog.Document = printDocument;
+            if (dataGridView1.SelectedRows.Count > 0){
+
             if (printDialog.ShowDialog() == DialogResult.OK)
             {
                 printDocument.Print();
+
+            }
+            }
+            else
+            {
+                MessageBox.Show("No data selected.");
             }
         }
 

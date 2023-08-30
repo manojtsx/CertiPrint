@@ -60,6 +60,26 @@ namespace WindowsFormsApp1.UserControls
         private void button3_Click(object sender, EventArgs e)
         {
             EditFacilitatorUserControl = new editFacilitatorUserControl();
+            string id = "";
+            string username = "";
+            string password = "";
+            string subject = "";
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                id = selectedRow.Cells["id"].Value.ToString();
+                username = selectedRow.Cells["username"].Value.ToString();
+                password = selectedRow.Cells["password"].Value.ToString();
+                subject = selectedRow.Cells["subjectName"].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No rows selected..");
+            }
+            EditFacilitatorUserControl.label6.Text = id;
+            EditFacilitatorUserControl.usernameField.Text = username;
+            EditFacilitatorUserControl.passwordField.Text = password;
+            EditFacilitatorUserControl.subjectField.Text = subject;
             addUserControlSecondPanel(EditFacilitatorUserControl);
         }
 
