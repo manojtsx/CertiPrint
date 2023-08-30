@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.nameField = new System.Windows.Forms.TextBox();
+            this.subjectField = new System.Windows.Forms.TextBox();
+            this.passwordField = new System.Windows.Forms.TextBox();
+            this.usernameField = new System.Windows.Forms.TextBox();
+            this.addressField = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,10 +44,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Salmon;
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.nameField);
+            this.panel1.Controls.Add(this.subjectField);
+            this.panel1.Controls.Add(this.passwordField);
+            this.panel1.Controls.Add(this.usernameField);
+            this.panel1.Controls.Add(this.addressField);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -58,37 +58,37 @@
             this.panel1.Size = new System.Drawing.Size(396, 364);
             this.panel1.TabIndex = 0;
             // 
-            // textBox4
+            // subjectField
             // 
-            this.textBox4.Location = new System.Drawing.Point(126, 213);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(218, 22);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.subjectField.Location = new System.Drawing.Point(126, 213);
+            this.subjectField.Name = "subjectField";
+            this.subjectField.Size = new System.Drawing.Size(218, 22);
+            this.subjectField.TabIndex = 8;
+            this.subjectField.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox3
+            // passwordField
             // 
-            this.textBox3.Location = new System.Drawing.Point(126, 172);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(218, 22);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.passwordField.Location = new System.Drawing.Point(126, 114);
+            this.passwordField.Name = "passwordField";
+            this.passwordField.Size = new System.Drawing.Size(218, 22);
+            this.passwordField.TabIndex = 7;
+            this.passwordField.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox2
+            // usernameField
             // 
-            this.textBox2.Location = new System.Drawing.Point(126, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 22);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.usernameField.Location = new System.Drawing.Point(126, 66);
+            this.usernameField.Name = "usernameField";
+            this.usernameField.Size = new System.Drawing.Size(218, 22);
+            this.usernameField.TabIndex = 6;
+            this.usernameField.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // nameField
+            // addressField
             // 
-            this.nameField.Location = new System.Drawing.Point(126, 72);
-            this.nameField.Name = "nameField";
-            this.nameField.Size = new System.Drawing.Size(218, 22);
-            this.nameField.TabIndex = 5;
-            this.nameField.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.addressField.Location = new System.Drawing.Point(126, 167);
+            this.addressField.Name = "addressField";
+            this.addressField.Size = new System.Drawing.Size(218, 22);
+            this.addressField.TabIndex = 5;
+            this.addressField.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -116,7 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 175);
+            this.label3.Location = new System.Drawing.Point(39, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 2;
@@ -126,7 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 126);
+            this.label2.Location = new System.Drawing.Point(39, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 1;
@@ -136,11 +136,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 77);
+            this.label1.Location = new System.Drawing.Point(39, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.label1.Text = "Address";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // addFacilitatorUserControl
@@ -162,10 +162,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox nameField;
+        private System.Windows.Forms.TextBox subjectField;
+        private System.Windows.Forms.TextBox passwordField;
+        private System.Windows.Forms.TextBox usernameField;
+        private System.Windows.Forms.TextBox addressField;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
     }

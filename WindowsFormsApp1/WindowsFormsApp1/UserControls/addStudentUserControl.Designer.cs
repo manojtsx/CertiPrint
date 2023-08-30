@@ -39,8 +39,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.remarksField = new System.Windows.Forms.ComboBox();
-            this.addressField = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.gpaField = new System.Windows.Forms.TextBox();
             this.gradeField = new System.Windows.Forms.TextBox();
             this.nameField = new System.Windows.Forms.TextBox();
@@ -77,7 +75,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 252);
+            this.label4.Location = new System.Drawing.Point(49, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 3;
@@ -88,7 +86,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(142, 290);
+            this.button1.Location = new System.Drawing.Point(142, 263);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 45);
             this.button1.TabIndex = 4;
@@ -104,8 +102,6 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.remarksField);
-            this.panel1.Controls.Add(this.addressField);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.gpaField);
             this.panel1.Controls.Add(this.gradeField);
             this.panel1.Controls.Add(this.nameField);
@@ -163,26 +159,10 @@
             "Average",
             "Not Good",
             "Worse"});
-            this.remarksField.Location = new System.Drawing.Point(142, 243);
+            this.remarksField.Location = new System.Drawing.Point(141, 217);
             this.remarksField.Name = "remarksField";
             this.remarksField.Size = new System.Drawing.Size(207, 24);
             this.remarksField.TabIndex = 11;
-            // 
-            // addressField
-            // 
-            this.addressField.Location = new System.Drawing.Point(142, 207);
-            this.addressField.Name = "addressField";
-            this.addressField.Size = new System.Drawing.Size(207, 22);
-            this.addressField.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(44, 207);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Address";
             // 
             // gpaField
             // 
@@ -231,8 +211,6 @@
         private System.Windows.Forms.TextBox nameField;
         private System.Windows.Forms.TextBox gpaField;
         private System.Windows.Forms.ComboBox remarksField;
-        private System.Windows.Forms.TextBox addressField;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox usernameField;

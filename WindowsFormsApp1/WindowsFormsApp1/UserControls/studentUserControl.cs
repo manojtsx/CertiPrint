@@ -18,10 +18,11 @@ namespace WindowsFormsApp1.UserControls
         private editStudentUserControl EditStudentUserControl;
         private adminUserControl AdminUserControl;
         private PrintDocument printDocument;
+        private certificatedesign Certificatedesign;
         public studentUserControl()
         {
             InitializeComponent();
-            AddStudentUserControl = new addStudentUserControl();    
+             Certificatedesign = new certificatedesign();    
             printDocument = new PrintDocument();
             printDocument.PrintPage += PrintDocument_PrintPage;
         }
@@ -29,8 +30,8 @@ namespace WindowsFormsApp1.UserControls
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
             Graphics graphics = e.Graphics;
-            Bitmap bitmap = new Bitmap(AddStudentUserControl.Width, AddStudentUserControl.Height);
-            AddStudentUserControl.DrawToBitmap(bitmap, new Rectangle(0, 0, AddStudentUserControl.Width, AddStudentUserControl.Height));
+            Bitmap bitmap = new Bitmap(Certificatedesign.Width, Certificatedesign.Height);
+            Certificatedesign.DrawToBitmap(bitmap, new Rectangle(0, 0, Certificatedesign.Width, Certificatedesign.Height));
             graphics.DrawImage(bitmap, new Point(100, 100)); // Adjust the position as needed
         }
 

@@ -116,6 +116,12 @@
     <Compile Include="UserControls\adminUserControl.Designer.cs">
       <DependentUpon>adminUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\certificatedesign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\certificatedesign.Designer.cs">
+      <DependentUpon>certificatedesign.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\editFacilitatorUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\adminUserControl.resx">
       <DependentUpon>adminUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\certificatedesign.resx">
+      <DependentUpon>certificatedesign.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\editFacilitatorUserControl.resx">
       <DependentUpon>editFacilitatorUserControl.cs</DependentUpon>

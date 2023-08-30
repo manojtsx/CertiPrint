@@ -22,3 +22,4 @@ D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF
 D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.dll
 D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.xml
 D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.certificatedesign.resources

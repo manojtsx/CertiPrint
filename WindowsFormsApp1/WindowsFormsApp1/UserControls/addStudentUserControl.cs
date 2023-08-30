@@ -27,26 +27,21 @@ namespace WindowsFormsApp1.UserControls
             try
             {
                 // Create a SQL INSERT query based on your data
-                string insertLoginQuery = "INSERT INTO logins(username,password,usertype) VALUES(@UsernameLogin,@PasswordLogin,student)";
                 string insertQuery = "INSERT INTO students(username,password,name, grade,gpa,remarks) VALUES (@Username,@Password,@Name,@Grade,@GPA,@Remarks)";
 
                 // Assuming you have two textboxes named textBox1 and textBox2 for input
                 using (SqlCommand dbCommand = new SqlCommand(insertQuery))
                 {
-                    dbCommand.Parameters.AddWithValue("@UsernameLogin", usernameField.Text);
-                    dbCommand.Parameters.AddWithValue("@PasswordLogin",passwordField.Text);
+                  
                     dbCommand.Parameters.AddWithValue("@Username", usernameField.Text);
                     dbCommand.Parameters.AddWithValue("@Password", passwordField.Text);
                     dbCommand.Parameters.AddWithValue("@Name", nameField.Text);
                     dbCommand.Parameters.AddWithValue("@Grade", gradeField.Text);
                     dbCommand.Parameters.AddWithValue("@GPA", gpaField.Text);
                     dbCommand.Parameters.AddWithValue("@Remarks", remarksField.Text);
-
-                    // Execute the query using the DBConnect class
-                    MessageBox.Show("Checking data conection");
-                    int rowsAffectedLogin = DBConnect.executeQuery(dbCommand);
+             
                     int rowsAffected = DBConnect.executeQuery(dbCommand);
-                    if (rowsAffected > 0 && rowsAffectedLogin > 0)
+                    if (rowsAffected > 0)
                     {
                         MessageBox.Show("Data inserted successfully.");
                     }
