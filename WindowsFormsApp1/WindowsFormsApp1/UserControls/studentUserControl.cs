@@ -15,6 +15,7 @@ using System.Data.Common.CommandTrees.ExpressionBuilder;
 using System.Data.Entity;
 using System.Reflection;
 using System.Runtime.Remoting.Contexts;
+using System.Diagnostics;
 
 namespace WindowsFormsApp1.UserControls
 {
@@ -145,11 +146,24 @@ namespace WindowsFormsApp1.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
+            string gpa = "";
+            string grade = "";
+            string name = "";
+            string remarks = "";
             PrintDialog printDialog = new PrintDialog();
             printDialog.Document = printDocument;
             if (dataGridView1.SelectedRows.Count > 0){
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                gpa = selectedRow.Cells["gpa"].Value.ToString();
+                grade = selectedRow.Cells["grade"].Value.ToString();
+                name = selectedRow.Cells["name"].Value.ToString();
+                remarks = selectedRow.Cells["remarks"].ToString();
+                Certificatedesign.nameField.Text = name;
+                Certificatedesign.gpaField.Text = gpa;
+                Certificatedesign.gradeField.Text = grade;
+                Certificatedesign.remarksField.Text = remarks;
 
-            if (printDialog.ShowDialog() == DialogResult.OK)
+                if (printDialog.ShowDialog() == DialogResult.OK)
             {
                 printDocument.Print();
 

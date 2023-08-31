@@ -16,5 +16,15 @@ namespace WindowsFormsApp1.UserControls
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void certificatedesign_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

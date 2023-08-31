@@ -35,6 +35,7 @@
             this.facilitatorMenu = new System.Windows.Forms.Label();
             this.studentMenu = new System.Windows.Forms.Label();
             this.homeMenu = new System.Windows.Forms.Label();
+            this.firstPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             this.logoutMenu.Size = new System.Drawing.Size(73, 22);
             this.logoutMenu.TabIndex = 1;
             this.logoutMenu.Text = "Log Out";
+            this.logoutMenu.Click += new System.EventHandler(this.logoutMenu_Click);
             // 
             // facilitatorMenu
             // 
@@ -81,6 +83,7 @@
             this.facilitatorMenu.Size = new System.Drawing.Size(93, 22);
             this.facilitatorMenu.TabIndex = 1;
             this.facilitatorMenu.Text = "Facilitator";
+            this.facilitatorMenu.Click += new System.EventHandler(this.facilitatorMenu_Click);
             // 
             // studentMenu
             // 
@@ -91,6 +94,7 @@
             this.studentMenu.Size = new System.Drawing.Size(68, 22);
             this.studentMenu.TabIndex = 1;
             this.studentMenu.Text = "Student";
+            this.studentMenu.Click += new System.EventHandler(this.studentMenu_Click);
             // 
             // homeMenu
             // 
@@ -101,11 +105,20 @@
             this.homeMenu.Size = new System.Drawing.Size(57, 22);
             this.homeMenu.TabIndex = 0;
             this.homeMenu.Text = "Home";
+            this.homeMenu.Click += new System.EventHandler(this.homeMenu_Click);
+            // 
+            // firstPanel
+            // 
+            this.firstPanel.Location = new System.Drawing.Point(3, 92);
+            this.firstPanel.Name = "firstPanel";
+            this.firstPanel.Size = new System.Drawing.Size(1384, 451);
+            this.firstPanel.TabIndex = 1;
             // 
             // facilitatorHomepageUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.firstPanel);
             this.Controls.Add(this.panel1);
             this.Name = "facilitatorHomepageUserControl";
             this.Size = new System.Drawing.Size(1390, 840);
@@ -124,5 +137,6 @@
         private System.Windows.Forms.Label facilitatorMenu;
         private System.Windows.Forms.Label studentMenu;
         private System.Windows.Forms.Label homeMenu;
+        private System.Windows.Forms.Panel firstPanel;
     }
 }

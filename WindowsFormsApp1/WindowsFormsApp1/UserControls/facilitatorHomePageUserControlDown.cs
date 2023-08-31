@@ -12,16 +12,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.UserControls
 {
-    public partial class adminHomePage : UserControl
+    public partial class facilitatorHomePageUserControlDown : UserControl
     {
-        public adminHomePage()
+        public facilitatorHomePageUserControlDown()
         {
             InitializeComponent();
             UpdateStudentCount();
             UpdateFacilitatorCount();
         }
 
-        private void adminHomePage_Load(object sender, EventArgs e)
+        private void facilitatorHomePageUserControlDown_Load(object sender, EventArgs e)
         {
 
         }
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1.UserControls
             {
                 connection.Open();
 
-                string query = "SELECT COUNT(*) FROM students"; 
+                string query = "SELECT COUNT(*) FROM students";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     int studentCount = (int)command.ExecuteScalar();
@@ -52,11 +52,6 @@ namespace WindowsFormsApp1.UserControls
                     facilitatorNumber.Text = studentCount.ToString();
                 }
             }
-        }
-
-        private void studentNumber_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

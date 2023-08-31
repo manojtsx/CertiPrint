@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
         public Login()
         {
             InitializeComponent();
+            userroleField.Text = "admin";
         }
         private void exitButton_Click(object sender, EventArgs e)
         {

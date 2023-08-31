@@ -134,11 +134,35 @@
     <Compile Include="UserControls\editStudentUserControl.Designer.cs">
       <DependentUpon>editStudentUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\facilitatorEditStudentRemarks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\facilitatorEditStudentRemarks.Designer.cs">
+      <DependentUpon>facilitatorEditStudentRemarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\facilitatorFacilitatorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\facilitatorFacilitatorUserControl.Designer.cs">
+      <DependentUpon>facilitatorFacilitatorUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\facilitatorHomepageUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\facilitatorHomepageUserControl.Designer.cs">
       <DependentUpon>facilitatorHomepageUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\facilitatorHomePageUserControlDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\facilitatorHomePageUserControlDown.Designer.cs">
+      <DependentUpon>facilitatorHomePageUserControlDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\facilitatorStudentUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\facilitatorStudentUserControl.Designer.cs">
+      <DependentUpon>facilitatorStudentUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\facilitatorUserControl.cs">
       <SubType>UserControl</SubType>
@@ -197,8 +221,20 @@
     <EmbeddedResource Include="UserControls\editStudentUserControl.resx">
       <DependentUpon>editStudentUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\facilitatorEditStudentRemarks.resx">
+      <DependentUpon>facilitatorEditStudentRemarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\facilitatorFacilitatorUserControl.resx">
+      <DependentUpon>facilitatorFacilitatorUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\facilitatorHomepageUserControl.resx">
       <DependentUpon>facilitatorHomepageUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\facilitatorHomePageUserControlDown.resx">
+      <DependentUpon>facilitatorHomePageUserControlDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\facilitatorStudentUserControl.resx">
+      <DependentUpon>facilitatorStudentUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\facilitatorUserControl.resx">
       <DependentUpon>facilitatorUserControl.cs</DependentUpon>

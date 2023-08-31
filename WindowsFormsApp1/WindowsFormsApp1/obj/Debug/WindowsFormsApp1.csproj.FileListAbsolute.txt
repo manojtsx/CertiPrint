@@ -23,3 +23,7 @@ D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFr
 D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.xml
 D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.certificatedesign.resources
+D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.facilitatorHomePageUserControlDown.resources
+D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.facilitatorStudentUserControl.resources
+D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.facilitatorFacilitatorUserControl.resources
+D:\projects\CertiPrint-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControls.facilitatorEditStudentRemarks.resources
