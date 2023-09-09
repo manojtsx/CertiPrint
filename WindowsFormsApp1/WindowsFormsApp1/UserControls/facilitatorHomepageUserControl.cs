@@ -51,7 +51,12 @@ namespace WindowsFormsApp1.UserControls
         private void logoutMenu_Click(object sender, EventArgs e)
         {
             login = new Login();
-            Login.RestartApplication();
+            DialogResult result = MessageBox.Show("Do you want to exit?", "Confirmation", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                Login.RestartApplication();
+            }
         }
     }
 }

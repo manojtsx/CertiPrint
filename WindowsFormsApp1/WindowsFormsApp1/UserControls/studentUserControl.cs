@@ -84,18 +84,20 @@ namespace WindowsFormsApp1.UserControls
             EditStudentUserControl = new editStudentUserControl();
             string id = "";
             string username = "";
+            string name = "";
+            string password = "";
             string gpa = "";
             string grade = "";
-            string address = "";
             string remarks = "";
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 id = selectedRow.Cells["id"].Value.ToString();
                 username = selectedRow.Cells["username"].Value.ToString();
+                name = selectedRow.Cells["name"].Value.ToString();
+                password = selectedRow.Cells["password"].Value.ToString();
                 gpa = selectedRow.Cells["gpa"].Value.ToString();
                 grade = selectedRow.Cells["grade"].Value.ToString();
-                address = selectedRow.Cells["gpa"].Value.ToString();
                remarks = selectedRow.Cells["remarks"].Value.ToString();
             }
             else
@@ -104,9 +106,10 @@ namespace WindowsFormsApp1.UserControls
             }
             EditStudentUserControl.label7.Text = id;
             EditStudentUserControl.nameField.Text = username;
+            EditStudentUserControl.usernameField.Text = name;
+            EditStudentUserControl.passwordField.Text = password;
             EditStudentUserControl.gradeField.Text = grade;
             EditStudentUserControl.gpaField.Text = gpa;
-            EditStudentUserControl.addressField.Text = address;
             EditStudentUserControl.remarksField.Text = remarks;
             addUserControlSecondPanel(EditStudentUserControl);
 

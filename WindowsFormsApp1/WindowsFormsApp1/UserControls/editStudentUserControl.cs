@@ -31,7 +31,7 @@ namespace WindowsFormsApp1.UserControls
             {
                 connection.Open();
 
-                string updateQuery = "UPDATE students SET grade = @Value1, gpa = @Value2, name = @Value3, remarks = @Value4  WHERE ID = @ID";
+                string updateQuery = "UPDATE students SET grade = @Value1, gpa = @Value2, name = @Value3, remarks = @Value4,username = @Value5, password = @Value6  WHERE ID = @ID";
                 using (SqlCommand command = new SqlCommand(updateQuery, connection))
                 {
                     command.Parameters.AddWithValue("@Value1", gradeField.Text);
@@ -39,6 +39,8 @@ namespace WindowsFormsApp1.UserControls
                     command.Parameters.AddWithValue("@Value3", nameField.Text);
                     command.Parameters.AddWithValue("@Value4", remarksField.Text);
                     command.Parameters.AddWithValue("@ID", label7.Text);
+                    command.Parameters.AddWithValue("@Value5",usernameField.Text);  
+                    command.Parameters.AddWithValue("@Value6",passwordField.Text);  
                     command.ExecuteNonQuery();
                     MessageBox.Show("Data upated Successfully");
                 }
@@ -51,6 +53,16 @@ namespace WindowsFormsApp1.UserControls
         }
 
         private void editStudentUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameField_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gpaField_TextChanged(object sender, EventArgs e)
         {
 
         }

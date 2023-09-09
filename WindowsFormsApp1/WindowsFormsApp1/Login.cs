@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             userroleField.Text = "admin";
+           
         }
         private void exitButton_Click(object sender, EventArgs e)
         {
@@ -182,6 +183,11 @@ namespace WindowsFormsApp1
 
             Process.Start(fileName, arguments);
             Environment.Exit(0); // Exit the current instance of the application
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            passwordField.UseSystemPasswordChar = !passwordField.UseSystemPasswordChar;
         }
     }
 }

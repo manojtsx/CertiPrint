@@ -66,7 +66,7 @@ namespace WindowsFormsApp1.UserControls
             try
             {
                 // Create a SQL INSERT query based on your data
-                string insertQuery = "INSERT INTO facilitators(username,password,address,subjectName) VALUES (@Username,@Password,@Address,@Subject)";
+                string insertQuery = "INSERT INTO facilitators(username,password,subjectName) VALUES (@Username,@Password,@Subject)";
 
                 // Assuming you have two textboxes named textBox1 and textBox2 for input
                 using (SqlCommand dbCommand = new SqlCommand(insertQuery))
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1.UserControls
                   
                     dbCommand.Parameters.AddWithValue("@Username", usernameField.Text);
                     dbCommand.Parameters.AddWithValue("@Password", passwordField.Text);
-                    dbCommand.Parameters.AddWithValue("@Address", addressField.Text);
+     
                     dbCommand.Parameters.AddWithValue("@Subject", subjectField.Text);
                    
 
