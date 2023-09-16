@@ -32,7 +32,8 @@ namespace WindowsFormsApp1.UserControls
             Certificatedesign = new certificatedesign();    
             printDocument = new PrintDocument();
             printDocument.PrintPage += PrintDocument_PrintPage;
-
+            printDocument.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1169); // Width and height are in hundredths of an inch
+            printDocument.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0); // Set margins as needed
             using (SqlConnection connection = new SqlConnection(dbConnect.strConnString))
             {
                 connection.Open();
@@ -58,11 +59,12 @@ namespace WindowsFormsApp1.UserControls
         //prints the usercontrol
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Graphics graphics = e.Graphics;
+            Graphics graphics = e.Graphics;  
             Bitmap bitmap = new Bitmap(Certificatedesign.Width, Certificatedesign.Height);
             Certificatedesign.DrawToBitmap(bitmap, new Rectangle(0, 0, Certificatedesign.Width, Certificatedesign.Height));
-            graphics.DrawImage(bitmap, new Point(100, 100)); // Adjust the position as needed
+            graphics.DrawImage(bitmap, new Point(10, 10)); // Adjust the position as needed
         }
+        
 
         public void addUserControlSecondPanel(UserControl userControl)
         {

@@ -16,6 +16,7 @@ namespace WindowsFormsApp1.UserControls
     public partial class addStudentUserControl : UserControl
     {
         private dbConnect DBConnect;
+        private studentUserControl StudentUserControl;
         public addStudentUserControl()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace WindowsFormsApp1.UserControls
                     {
                         MessageBox.Show("Data insertion failed.");
                     }
+                    StudentUserControl = new studentUserControl();  
                 }
             }
             catch (Exception ex)
